@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: project-web2
+    labels:
+       app: web  
+spec:
+    containers:
+     - name: html-con
+       image: florence237/html-image
