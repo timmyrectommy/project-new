@@ -1,10 +1,11 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
 apiVersion: v1
 kind: Pod
 metadata:
-    name: project-web2
-    labels:
-       app: web  
+  name: project-web 
+  labels:
+    app: web
 spec:
-    containers:
-     - name: html-con
-       image: florence237/html-image
+  containers:
+  - name: project-web
+    image: timmyrectommy/web-img:v2

@@ -2,12 +2,16 @@ apiVersion: v1
 kind: Service
 metadata:
   name: project-web
-    # namespace: web
 spec:
   selector:
-     app: web
+    app: web
   ports:
-     - name: project-web
-       port: 80
-       nodePort: 30201
-  type: NodePort
+  - name: project-web
+    protocol: TCP
+    port: 80
+
+    #targetPort: 80
+    # If you set the `spec.type` field to `NodePort` and you want a specific port number,
+    # you can specify a value in the `spec.ports[*].nodePort` field.
+    nodePort: 30101
+  type: NodePort   
